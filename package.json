@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "run-p serve watch",
-    "serve": "live-server ./src --port=8090 --host=localhost --no-browser",
+    "serve": "live-server ./src --port=8090 --host=localhost --no-browser --wait=100 --no-css-inject",
     "tailwind": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
     "watch": "npm run tailwind -- --watch"
   },
