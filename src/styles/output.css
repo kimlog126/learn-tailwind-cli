@@ -59,6 +59,13 @@
     );
     --lion: repeat(auto-fit, minmax(200px, 1fr));
     --animate-wobble: wobble 0.6s infinite ease-in-out;
+    --color-ediya-blue-200: #2c68ae;
+    --color-ediya-blue-300: #24388d;
+    --ediya-blue: linear-gradient(
+    -45deg,
+    var(--color-ediya-blue-200),
+    var(--color-ediya-blue-300)
+  );
   }
 }
 @layer base {
@@ -232,6 +239,15 @@
   .bottom-4 {
     bottom: calc(var(--spacing) * 4);
   }
+  .col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .col-start-2 {
+    grid-column-start: 2;
+  }
+  .row-start-1 {
+    grid-row-start: 1;
+  }
   .m-10 {
     margin: calc(var(--spacing) * 10);
   }
@@ -247,6 +263,9 @@
   .block {
     display: block;
   }
+  .contents {
+    display: contents;
+  }
   .flex {
     display: flex;
   }
@@ -259,6 +278,9 @@
   .size-16 {
     width: calc(var(--spacing) * 16);
     height: calc(var(--spacing) * 16);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
   }
   .h-12 {
     height: calc(var(--spacing) * 12);
@@ -299,11 +321,23 @@
   .grid-cols-\(--lion\) {
     grid-template-columns: var(--lion);
   }
+  .grid-cols-\[1fr_100px\] {
+    grid-template-columns: 1fr 100px;
+  }
+  .grid-cols-subgrid {
+    grid-template-columns: subgrid;
+  }
+  .grid-rows-subgrid {
+    grid-template-rows: subgrid;
+  }
   .items-center {
     align-items: center;
   }
   .justify-center {
     justify-content: center;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
@@ -321,6 +355,9 @@
       margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
       margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
     }
+  }
+  .justify-self-end {
+    justify-self: flex-end;
   }
   .truncate {
     overflow: hidden;
@@ -385,6 +422,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .bg-\(image\:--ediya-blue\) {
+    background-image: var(--ediya-blue);
+  }
   .fill-blue-500 {
     fill: var(--color-blue-500);
   }
@@ -396,6 +436,9 @@
   }
   .text-center {
     text-align: center;
+  }
+  .text-right {
+    text-align: right;
   }
   .font-\[SUIT\] {
     font-family: SUIT;
@@ -524,7 +567,7 @@
     background-color: var(--color-blue-950);
     > div {
       position: relative;
-      width: 150px;
+      width: 200px;
       padding: calc(var(--spacing) * 4);
       color: var(--color-white);
     }
@@ -626,21 +669,21 @@
 }
 @keyframes wobble {
   0%, 100% {
-    transform: translateX(0%);
+    transform: translateX(0%) rotate(0deg);
   }
   15% {
-    transform: translateX(-25%) rotate(-5deg);
+    transform: translateX(-15px) rotate(-5deg);
   }
   30% {
-    transform: translateX(20%) rotate(3deg);
+    transform: translateX(10px) rotate(3deg);
   }
   45% {
-    transform: translateX(-15%) rotate(-3deg);
+    transform: translateX(-10px) rotate(-3deg);
   }
   60% {
-    transform: translateX(10%) rotate(2deg);
+    transform: translateX(5px) rotate(2deg);
   }
   75% {
-    transform: translateX(-5%) rotate(-1deg);
+    transform: translateX(-5px) rotate(-1deg);
   }
 }
