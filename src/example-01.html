@@ -1,0 +1,90 @@
+<!doctype html>
+<!-- saved from url=(0022)http://localhost:8090/ -->
+<html lang="ko-KR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>중앙 배치 — Tailwind CSS</title>
+    <link rel="icon" href="http://localhost:8090/assets/favicon.svg" />
+    <link rel="stylesheet" href="./example-01_files/output.css" />
+  </head>
+  <!-- UI를 완성해주세요 ! -->
+  <body
+    class="bg-sky-200 font-[SUIT] min-h-screen flex justify-center items-center text-blue-500 hover:text-pink-500"
+  >
+    <div
+      class="bg-white w-1/2 min-w-3xs p-6 flex rounded-2xl shadow-2xl items-center gap-6"
+    >
+      <svg
+        class="size-16 shrink-0"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 54 33"
+      >
+        <g clip-path="url(#prefix__clip0)">
+          <path
+            fill="#38bdf8"
+            fill-rule="evenodd"
+            d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
+            clip-rule="evenodd"
+          ></path>
+        </g>
+        <defs>
+          <clippath id="prefix__clip0">
+            <path fill="#fff" d="M0 0h54v32.4H0z"></path>
+          </clippath>
+        </defs>
+      </svg>
+      <div class="space-y-3">
+        <h1 class="font-[SUIT] font-[700] text-3xl">Tailwind CSS</h1>
+        <p class="text-black">
+          다양한 Tailwind CSS의 유틸리티 세트를 활용해 복잡한 컴포넌트를 구성할
+          수 있습니다.
+        </p>
+        <a href="http://localhost:8090/#" class="">유틸리티 퍼스트 펀더멘탈</a>
+      </div>
+    </div>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              head.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              head.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          console.log("Live reload enabled.");
+        })();
+      }
+      // ]]>
+    </script>
+  </body>
+</html>
