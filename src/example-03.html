@@ -10,13 +10,13 @@
       as="font"
       href="/assets/font/woff2/PretendardVariable.woff2"
     />
-    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="stylesheet" href="/styles/output.css" />
   </head>
   <body>
-    <section>
-      <div>
-        <h2>NOTICE</h2>
-        <div>
+    <section class="flex border border-gray-500 bg-blue-950">
+      <div class="relative w-[150px] p-4 text-white">
+        <h2 class="text-xl font-bold">NOTICE</h2>
+        <div class="absolute right-2 bottom-2">
           <button>
             <svg
               width="16"
@@ -50,12 +50,16 @@
           </button>
         </div>
       </div>
-      <article>
-        <h3>이디야멤버스가 새로워집니다.</h3>
-        <time>2020.04.25</time>
-        <p>
+      <article class="min-w-0 grow space-y-2 bg-white p-4">
+        <h3 class="text-blue950 text-lg font-bold text-blue-800">
+          이디야멤버스가 새로워집니다.
+        </h3>
+        <time class="block text-xs text-gray-500" datetime="2025-03-14T16:31:04"
+          >2020.04.25</time
+        >
+        <p class="mt-4 truncate">
           이디야멤버스에 새로운 기능이 추가됩니다. 추가되는 고객등급제, 이디야
-          카드, 스마트 ...
+          카드, 스마트
         </p>
       </article>
     </section>
