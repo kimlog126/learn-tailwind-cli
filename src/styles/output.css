@@ -2,18 +2,9 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: "Pretendard Variable", sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-100: oklch(0.962 0.059 95.617);
-    --color-amber-200: oklch(0.924 0.12 95.746);
-    --color-amber-300: oklch(0.879 0.169 91.605);
-    --color-amber-400: oklch(0.828 0.189 84.429);
-    --color-lime-100: oklch(0.967 0.067 122.328);
-    --color-lime-200: oklch(0.938 0.127 124.321);
-    --color-lime-300: oklch(0.897 0.196 126.665);
-    --color-lime-400: oklch(0.841 0.238 128.85);
     --color-sky-200: oklch(0.901 0.058 230.902);
     --color-blue-100: oklch(0.932 0.032 255.585);
     --color-blue-200: oklch(0.882 0.059 254.128);
@@ -52,6 +43,8 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --lion: repeat(auto-fit, minmax(200px, 1fr));
+    --color-edi: #000;
   }
 }
 @layer base {
@@ -232,12 +225,6 @@
     width: calc(var(--spacing) * 16);
     height: calc(var(--spacing) * 16);
   }
-  .h-6 {
-    height: calc(var(--spacing) * 6);
-  }
-  .h-7 {
-    height: calc(var(--spacing) * 7);
-  }
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
@@ -261,9 +248,6 @@
   }
   .min-w-3xs {
     min-width: var(--container-3xs);
-  }
-  .min-w-\[600px\] {
-    min-width: 600px;
   }
   .flex-shrink {
     flex-shrink: 1;
@@ -303,18 +287,6 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .bg-amber-100 {
-    background-color: var(--color-amber-100);
-  }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
-  }
-  .bg-amber-300 {
-    background-color: var(--color-amber-300);
-  }
-  .bg-amber-400 {
-    background-color: var(--color-amber-400);
-  }
   .bg-blue-100 {
     background-color: var(--color-blue-100);
   }
@@ -327,17 +299,8 @@
   .bg-blue-400 {
     background-color: var(--color-blue-400);
   }
-  .bg-lime-100 {
-    background-color: var(--color-lime-100);
-  }
-  .bg-lime-200 {
-    background-color: var(--color-lime-200);
-  }
-  .bg-lime-300 {
-    background-color: var(--color-lime-300);
-  }
-  .bg-lime-400 {
-    background-color: var(--color-lime-400);
+  .bg-edi {
+    background-color: var(--color-edi);
   }
   .bg-pink-100 {
     background-color: var(--color-pink-100);
@@ -380,12 +343,6 @@
   }
   .text-center {
     text-align: center;
-  }
-  .font-\[\'SUIT\'\] {
-    font-family: 'SUIT';
-  }
-  .font-\[Pretendard\] {
-    font-family: Pretendard;
   }
   .font-\[SUIT\] {
     font-family: SUIT;
@@ -451,6 +408,36 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+}
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/font/woff2/PretendardVariable.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: "Noto Serif KR";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Noto Serif CJK KR"), local("Source Han Serif K"), local("Source Han Serif"), local("Noto Serif CJK"), local("Noto Serif"), url(/assets/font/notoserif/web/NotoSerifCJKkr-ExtraLight-subset.woff) format("woff"), url(/assets/font/notoserif/web/NotoSerifCJKkr-ExtraLight-subset.woff2) format("woff2"), url(/assets/font/notoserif/web/NotoSerifCJKkr-ExtraLight-subset.otf) format("otf");
+}
+@font-face {
+  font-family: "Noto Serif KR";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Serif CJK KR"), local("Source Han Serif K"), local("Source Han Serif"), local("Noto Serif CJK"), local("Noto Serif"), url(/assets/font/notoserif/web/NotoSerifCJKkr-Regular-subset.woff) format("woff"), url(/assets/font/notoserif/web/NotoSerifCJKkr-Regular-subset.woff2) format("woff2"), url(/assets/font/notoserif/web/NotoSerifCJKkr-Regular-subset.otf) format("otf"), url(/assets/font/notoserif/web/NotoSerifCJKkr-Regular-subset.ttf) format("truetype"),;
+}
+@font-face {
+  font-family: "Noto Serif KR";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Noto Serif CJK KR"), local("Source Han Serif K"), local("Source Han Serif"), local("Noto Serif CJK"), local("Noto Serif"), url(/assets/font/notoserif/web/NotoSerifCJKkr-Bold-subset.woff) format("woff"), url(/assets/font/notoserif/web/NotoSerifCJKkr-Bold-subset.woff2) format("woff2"), url(/assets/font/notoserif/web/NotoSerifCJKkr-Bold-subset.otf) format("otf");
+}
+@font-face {
+  font-family: 'SUIT Variable';
+  font-weight: 100 900;
+  src: url('/assets/font/SUIT-Variable.woff2') format('woff2-variations');
 }
 @property --tw-rotate-x {
   syntax: "*";

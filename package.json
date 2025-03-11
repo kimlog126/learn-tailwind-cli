@@ -12,10 +12,5 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.12"
-  },
-
-  // .prettierrc
-{
-  "plugins": ["prettier-plugin-tailwindcss"]
-}
+  }
 }
